@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dfd5c3;
+}
+
+header {
+  width: 350px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #a3a3a3;
+  padding: 1rem;
+}
+
+.accent {
+  display: inline;
+  color: green;
+}
+
+#bio {
+  font-size: 14px;
+}
+
+.bio-link {
+  color: blue;
+}
+
+#answerSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+}
+
+#answerDesc {
+  font-size: 1.5em;
+  font-family: monospace;
+}
+
+#wordleAnswer {
+  font-weight: 900;
+  position: relative;
+}
+
+#wordleAnswer::after {
+  content: "";
+  width: 3px;
+  color: black;
+  position: absolute;
+  bottom: 0;
+}
+
+#showAnswer {
+  width: fit-content;
+  outline: none;
+  margin: 10px;
+  border: none;
+  border-radius: 2px;
+  transition: 0.2s;
+  color: white;
+  background-color: green;
+  padding: 6px 8px;
+}
+
+#showAnswer.current {
+  box-shadow: 0 0 0 2px white, 0 0 0 4px black;
+}
+
+#showAnswer:hover {
+  box-shadow: 0 0 4px 0 black;
+}

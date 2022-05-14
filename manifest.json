@@ -1,0 +1,32 @@
+{
+  "name": "WordleCrack",
+  "description": "Crack wordle everyday !",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "activeTab", "scripting", "tabs"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/wordleCracker16.png",
+      "32": "/images/wordleCracker32.png",
+      "48": "/images/wordleCracker48.png",
+      "128": "/images/wordleCracker128.png"
+    }
+  },
+  "host_permissions": ["https://www.nytimes.com/games/wordle/index.html"],
+  "icons": {
+    "16": "/images/wordleCracker16.png",
+    "32": "/images/wordleCracker32.png",
+    "48": "/images/wordleCracker48.png",
+    "128": "/images/wordleCracker128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.nytimes.com/games/wordle/index.html"],
+      "js": ["answer.js"]
+    }
+  ]
+}
